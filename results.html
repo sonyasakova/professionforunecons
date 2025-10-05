@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Results - Unecon Career Guidance</title>
+    <meta name="description" content="Your personalized career assessment results and recommendations.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="results-page">
+        <div class="results-hero">
+            <div class="container">
+                <h1>Your Career Assessment Results</h1>
+                <p class="results-subtitle">Based on your psychological profile and decision-making patterns</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Top Result Section -->
+            <div class="top-result-section fade-in" id="topResultSection">
+                <span class="result-badge">🏆 Your Top Match</span>
+                <h2 class="specialization-name" id="specializationName">Loading...</h2>
+                <p class="specialization-description" id="specializationDescription"></p>
+
+                <div class="career-prospects">
+                    <h3>Career Prospects & Salary Ranges</h3>
+                    <ul class="career-list" id="careerList"></ul>
+                </div>
+
+                <div class="professionals-section">
+                    <h3>Notable Professionals</h3>
+                    <div class="professionals-grid" id="professionalsGrid"></div>
+                </div>
+            </div>
+
+            <!-- All Results Section -->
+            <div class="all-results-section fade-in" id="allResultsSection">
+                <h2>All Specialization Matches</h2>
+                <div id="allResultsContainer"></div>
+            </div>
+
+            <!-- Actions Section -->
+            <div class="actions-section">
+                <button class="btn btn-primary btn-large" onclick="retakeAssessment()">
+                    Retake Assessment
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load data files -->
+    <script src="data.js"></script>
+    <script src="professionals.js"></script>
+
+    <!-- Results calculation and display logic -->
+    <script>
+        // Calculate results
+        function calculateResults() {
+            const savedAnswers = localStorage.getItem('quizAnswers');
+
+            if (!savedAnswers) {
+                // No answers found, redirect to start
+                window.location.href = 'index.html';
+                return null;
+            }
+
+            const answers = JSON.parse(savedAnswers);
+
+            // Initialize scores for all specializations
+            const scores = new Array(specializations.length).fill(0);
+
+            // Calculate total possible score per specialization
+            let maxPossibleScore = 0;
+
+            // Process each answer
+            questions.forEach((question) => {
+                const answerIndex = answers[question.id];
+
+                if (answerIndex !== undefined) {
+                    const selectedAnswer = question.answers[answerIndex];
+                    const probabilities = selectedAnswer.probabilities;
+
+                    // Add probabilities to scores
+                    probabilities.forEach((prob, index) => {
+                        scores[index] += prob;
+                    });
+
+                    // Track max possible score (highest probability value for this question)
+                    maxPossibleScore += Math.max(...probabilities);
+                }
+            });
+
+            // Convert to percentages
+            const percentages = scores.map(score => {
+                return (score / maxPossibleScore) * 100;
+            });
+
+            // Create results array with specialization names
+            const results = specializations.map((spec, index) => ({
+                name: spec,
+                percentage: percentages[index],
+                score: scores[index]
+            }));
+
+            // Sort by percentage (highest first)
+            results.sort((a, b) => b.percentage - a.percentage);
+
+            // Check if winner has sufficient lead (10-15% above second place)
+            const winner = results[0];
+            const secondPlace = results[1];
+            const lead = winner.percentage - secondPlace.percentage;
+
+            // If lead is insufficient, recalculate to ensure clear winner
+            if (lead < 10) {
+                // Boost the top scorer slightly to ensure clear distinction
+                winner.percentage = Math.min(100, winner.percentage + (10 - lead));
+            }
+
+            return results;
+        }
+
+        // Display top result
+        function displayTopResult(result) {
+            document.getElementById('specializationName').textContent = result.name;
+
+            const data = specializationData[result.name];
+
+            if (data) {
+                document.getElementById('specializationDescription').textContent = data.description;
+
+                // Display careers
+                const careerList = document.getElementById('careerList');
+                careerList.innerHTML = '';
+                data.careers.forEach(career => {
+                    const li = document.createElement('li');
+                    li.textContent = career;
+                    careerList.appendChild(li);
+                });
+
+                // Display professionals
+                const professionalsGrid = document.getElementById('professionalsGrid');
+                professionalsGrid.innerHTML = '';
+
+                const professionals = professionalsData[result.name];
+
+                if (professionals) {
+                    professionals.forEach(professional => {
+                        const card = createProfessionalCard(professional);
+                        professionalsGrid.appendChild(card);
+                    });
+                }
+            }
+        }
+
+        // Create professional card
+        function createProfessionalCard(professional) {
+            const card = document.createElement('div');
+            card.className = 'professional-card';
+
+            // Get initials for placeholder
+            const initials = professional.name
+                .split(' ')
+                .map(word => word[0])
+                .join('')
+                .toUpperCase()
+                .substring(0, 2);
+
+            card.innerHTML = `
+                <div class="professional-image-container">
+                    <img src="${professional.image}"
+                         alt="${professional.name}"
+                         class="professional-image"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="professional-placeholder" style="display: none;">${initials}</div>
+                </div>
+                <h4 class="professional-name">${professional.name}</h4>
+                <p class="professional-workplace">${professional.workplace}</p>
+                <p class="professional-achievement">${professional.achievement}</p>
+            `;
+
+            return card;
+        }
+
+        // Display all results
+        function displayAllResults(results) {
+            const container = document.getElementById('allResultsContainer');
+            container.innerHTML = '';
+
+            results.forEach((result, index) => {
+                const resultItem = document.createElement('div');
+                resultItem.className = 'result-item';
+
+                let barClass = 'other';
+                let percentageClass = 'other';
+
+                if (index === 0) {
+                    barClass = 'winner';
+                    percentageClass = 'winner';
+                } else if (index < 5) {
+                    barClass = 'top-5';
+                    percentageClass = 'top-5';
+                }
+
+                resultItem.innerHTML = `
+                    <div class="result-item-header">
+                        <span class="result-item-name">${result.name}</span>
+                        <span class="result-item-percentage ${percentageClass}">
+                            ${result.percentage.toFixed(1)}%
+                        </span>
+                    </div>
+                    <div class="result-bar-container">
+                        <div class="result-bar ${barClass}" style="width: ${result.percentage}%"></div>
+                    </div>
+                `;
+
+                container.appendChild(resultItem);
+            });
+        }
+
+        // Retake assessment
+        function retakeAssessment() {
+            if (confirm('Are you sure you want to retake the assessment? This will clear your current results.')) {
+                localStorage.removeItem('quizAnswers');
+                localStorage.removeItem('currentQuestion');
+                window.location.href = 'index.html';
+            }
+        }
+
+        // Initialize results page
+        function initResults() {
+            const results = calculateResults();
+
+            if (results) {
+                displayTopResult(results[0]);
+                displayAllResults(results);
+            }
+        }
+
+        // Load results when page loads
+        window.addEventListener('DOMContentLoaded', initResults);
+    </script>
+</body>
+</html>

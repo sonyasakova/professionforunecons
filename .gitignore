@@ -1,0 +1,15 @@
+# macOS system files
+.DS_Store
+._*
+.Trashes
+
+# AI-generated instruction files
+DEPLOYMENT_CHECKLIST.md
+PROJECT_SUMMARY.txt
+QUICKSTART.md
+
+# The original markdown source for professionals (data is already in JS)
+unecon_notable_professionals.md
+
+# Any temporary test files
+test_website.html

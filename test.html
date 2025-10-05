@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Assessment - Unecon</title>
+    <meta name="description" content="Complete your career assessment to discover your ideal professional path.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-page">
+        <div class="container">
+            <div class="quiz-container fade-in" id="quizContainer">
+                <div class="quiz-header">
+                    <div class="question-counter" id="questionCounter">
+                        Question 1 of 20
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar" style="width: 5%"></div>
+                    </div>
+                </div>
+
+                <h2 class="question-text" id="questionText">
+                    Loading question...
+                </h2>
+
+                <div class="answers-grid" id="answersContainer">
+                    <!-- Answers will be inserted here by JavaScript -->
+                </div>
+
+                <div class="quiz-navigation">
+                    <button class="btn btn-secondary" id="prevBtn" onclick="previousQuestion()">
+                        Previous
+                    </button>
+                    <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">
+                        Next
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load data files -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
