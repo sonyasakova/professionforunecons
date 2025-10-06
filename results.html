@@ -7,15 +7,15 @@
     <meta name="description" content="Your personalized career assessment results and recommendations.">
 
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./android-chrome-512x512.png">
+    <link rel="manifest" href="./site.webmanifest">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="results-page">
@@ -91,8 +91,8 @@
     </footer>
 
     <!-- Load data files -->
-    <script src="data.js"></script>
-    <script src="professionals.js"></script>
+    <script src="./data.js"></script>
+    <script src="./professionals.js"></script>
 
     <!-- Results calculation and display logic -->
     <script>
@@ -102,7 +102,7 @@
 
             if (!savedAnswers) {
                 // No answers found, redirect to start
-                window.location.href = 'index.html';
+                window.location.href = './index.html';
                 return null;
             }
 
@@ -304,7 +304,7 @@
             if (confirm('Are you sure you want to retake the assessment? This will clear your current results.')) {
                 localStorage.removeItem('quizAnswers');
                 localStorage.removeItem('currentQuestion');
-                window.location.href = 'index.html';
+                window.location.href = './index.html';
             }
         }
 
