@@ -213,7 +213,7 @@ const professionalsData = {
             name: "Jack Ma (Ma Yun)",
             workplace: "Co-founder of Alibaba Group; Philanthropist",
             achievement: "Created Alibaba, transforming Chinese e-commerce and revolutionizing global trade. His platforms (Alibaba, Taobao, Tmall) connect millions of businesses and consumers, pioneering digital marketplace models that reshaped international trade.",
-            image: "images/Jack Ma (Ma Yun).png"
+            image: "images/Jack Ma.png"
         },
         {
             name: "Angela Ahrendts",
@@ -228,18 +228,6 @@ const professionalsData = {
             workplace: "Princeton University - Professor of Sociology",
             achievement: "Pulitzer Prize winner for \"Evicted,\" groundbreaking research on poverty and housing. His ethnographic work transformed understanding of systemic inequality, influencing housing policy and poverty research methodology globally.",
             image: "images/Matthew Desmond.png"
-        },
-        {
-            name: "Arlie Russell Hochschild",
-            workplace: "University of California, Berkeley - Professor Emerita of Sociology",
-            achievement: "Pioneer in sociology of emotions and work-life balance. Her concept of \"emotional labor\" transformed understanding of service work, gender roles, and modern employment, influencing workplace policies worldwide.",
-            image: "images/Arlie Russell Hochschild.png"
-        },
-        {
-            name: "Saskia Sassen",
-            workplace: "Columbia University - Professor of Sociology",
-            achievement: "Leading scholar of globalization, immigration, and global cities. Her \"Global City\" concept revolutionized urban sociology, explaining how cities function as command centers in global economy, reshaping urban studies worldwide.",
-            image: "images/Saskia Sassen.png"
         }
     ],
     "Social Work": [
@@ -387,7 +375,7 @@ const professionalsData = {
             name: "Bill Marriott Jr.",
             workplace: "Marriott International - Executive Chairman",
             achievement: "Expanded family business into world's largest hotel company with 8,000+ properties across 139 countries. His leadership in franchising models, brand diversification, and hospitality innovation shaped modern hotel industry globally.",
-            image: "images/Bill Marriott Jr..png"
+            image: "images/Bill Marriott Jr.png"
         },
         {
             name: "Arne Sorenson",
@@ -533,7 +521,7 @@ const professionalsData = {
             name: "Bill Marriott Jr.",
             workplace: "Marriott International - Executive Chairman and Chairman Emeritus",
             achievement: "Expanded family business from single restaurant (1927) into world's largest hotel company with 8,000+ properties across 139 countries. His leadership in franchising models, brand diversification, and hospitality innovation shaped modern hotel industry globally for over 60 years.",
-            image: "images/Bill Marriott Jr..png"
+            image: "images/Bill Marriott Jr.png"
         },
         {
             name: "Arne Sorenson",

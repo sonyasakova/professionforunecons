@@ -18,36 +18,67 @@
 
         <div class="container">
             <!-- Top Result Section -->
-            <div class="top-result-section fade-in" id="topResultSection">
-                <span class="result-badge">🏆 Your Top Match</span>
+            <div class="top-result-section" id="topResultSection">
+                <div class="top-result-header">
+                    <span class="result-badge">🏆 Your Top Match</span>
+                    <div class="match-score" id="matchScore">--</div>
+                </div>
+
                 <h2 class="specialization-name" id="specializationName">Loading...</h2>
                 <p class="specialization-description" id="specializationDescription"></p>
 
-                <div class="career-prospects">
-                    <h3>Career Prospects & Salary Ranges</h3>
-                    <ul class="career-list" id="careerList"></ul>
+                <div class="info-grid">
+                    <div class="career-prospects-card">
+                        <div class="card-header">
+                            <h3>Career Prospects</h3>
+                            <span class="card-icon">💼</span>
+                        </div>
+                        <ul class="career-list" id="careerList"></ul>
+                    </div>
+
+                    <div class="top5-preview-card">
+                        <div class="card-header">
+                            <h3>Your Top 5 Matches</h3>
+                            <span class="card-icon">📊</span>
+                        </div>
+                        <div class="top5-mini-list" id="top5MiniList"></div>
+                    </div>
                 </div>
 
                 <div class="professionals-section">
-                    <h3>Notable Professionals</h3>
+                    <h3>Notable Professionals in This Field</h3>
                     <div class="professionals-grid" id="professionalsGrid"></div>
                 </div>
             </div>
 
             <!-- All Results Section -->
-            <div class="all-results-section fade-in" id="allResultsSection">
-                <h2>All Specialization Matches</h2>
+            <div class="all-results-section" id="allResultsSection">
+                <div class="section-header">
+                    <div>
+                        <h2>Complete Career Match Analysis</h2>
+                        <p class="section-subtitle">All 29 specializations ranked by compatibility</p>
+                    </div>
+                    <div class="results-legend">
+                        <span class="legend-item"><span class="legend-dot winner"></span>Top Match</span>
+                        <span class="legend-item"><span class="legend-dot top5"></span>Top 5</span>
+                        <span class="legend-item"><span class="legend-dot other"></span>Other</span>
+                    </div>
+                </div>
                 <div id="allResultsContainer"></div>
             </div>
 
             <!-- Actions Section -->
             <div class="actions-section">
                 <button class="btn btn-primary btn-large" onclick="retakeAssessment()">
-                    Retake Assessment
+                    Retake Test
                 </button>
             </div>
         </div>
     </div>
+
+    <footer class="page-footer">
+        UNECON
+    </footer>
 
     <!-- Load data files -->
     <script src="data.js"></script>
@@ -121,8 +152,13 @@
         }
 
         // Display top result
-        function displayTopResult(result) {
+        function displayTopResult(result, allResults) {
             document.getElementById('specializationName').textContent = result.name;
+
+            // Display match score with animation
+            const matchScoreEl = document.getElementById('matchScore');
+            matchScoreEl.textContent = result.percentage.toFixed(1) + '%';
+            matchScoreEl.style.setProperty('--percentage', result.percentage);
 
             const data = specializationData[result.name];
 
@@ -132,10 +168,31 @@
                 // Display careers
                 const careerList = document.getElementById('careerList');
                 careerList.innerHTML = '';
-                data.careers.forEach(career => {
+                data.careers.forEach((career, index) => {
                     const li = document.createElement('li');
                     li.textContent = career;
+                    li.style.animationDelay = `${index * 0.1}s`;
                     careerList.appendChild(li);
+                });
+
+                // Display Top 5 mini preview
+                const top5MiniList = document.getElementById('top5MiniList');
+                top5MiniList.innerHTML = '';
+                allResults.slice(0, 5).forEach((item, index) => {
+                    const miniItem = document.createElement('div');
+                    miniItem.className = 'top5-mini-item';
+                    miniItem.style.animationDelay = `${index * 0.1}s`;
+                    miniItem.innerHTML = `
+                        <div class="mini-rank">${index + 1}</div>
+                        <div class="mini-info">
+                            <div class="mini-name">${item.name}</div>
+                            <div class="mini-bar-container">
+                                <div class="mini-bar" style="width: ${item.percentage}%"></div>
+                            </div>
+                        </div>
+                        <div class="mini-percentage">${item.percentage.toFixed(1)}%</div>
+                    `;
+                    top5MiniList.appendChild(miniItem);
                 });
 
                 // Display professionals
@@ -145,8 +202,9 @@
                 const professionals = professionalsData[result.name];
 
                 if (professionals) {
-                    professionals.forEach(professional => {
+                    professionals.forEach((professional, index) => {
                         const card = createProfessionalCard(professional);
+                        card.style.animationDelay = `${index * 0.15}s`;
                         professionalsGrid.appendChild(card);
                     });
                 }
@@ -190,31 +248,44 @@
             results.forEach((result, index) => {
                 const resultItem = document.createElement('div');
                 resultItem.className = 'result-item';
+                resultItem.style.animationDelay = `${index * 0.03}s`;
 
                 let barClass = 'other';
                 let percentageClass = 'other';
+                let rankBadge = '';
 
                 if (index === 0) {
                     barClass = 'winner';
                     percentageClass = 'winner';
+                    rankBadge = '<span class="rank-badge gold">1</span>';
                 } else if (index < 5) {
                     barClass = 'top-5';
                     percentageClass = 'top-5';
+                    rankBadge = `<span class="rank-badge top5">${index + 1}</span>`;
+                } else {
+                    rankBadge = `<span class="rank-badge">${index + 1}</span>`;
                 }
 
                 resultItem.innerHTML = `
                     <div class="result-item-header">
+                        ${rankBadge}
                         <span class="result-item-name">${result.name}</span>
                         <span class="result-item-percentage ${percentageClass}">
                             ${result.percentage.toFixed(1)}%
                         </span>
                     </div>
                     <div class="result-bar-container">
-                        <div class="result-bar ${barClass}" style="width: ${result.percentage}%"></div>
+                        <div class="result-bar ${barClass}" style="width: 0%;" data-width="${result.percentage}"></div>
                     </div>
                 `;
 
                 container.appendChild(resultItem);
+
+                // Animate bar after a short delay
+                setTimeout(() => {
+                    const bar = resultItem.querySelector('.result-bar');
+                    bar.style.width = bar.dataset.width + '%';
+                }, 100 + (index * 30));
             });
         }
 
@@ -232,8 +303,17 @@
             const results = calculateResults();
 
             if (results) {
-                displayTopResult(results[0]);
+                displayTopResult(results[0], results);
                 displayAllResults(results);
+
+                // Trigger staggered animations
+                setTimeout(() => {
+                    document.getElementById('topResultSection').classList.add('visible');
+                }, 100);
+
+                setTimeout(() => {
+                    document.getElementById('allResultsSection').classList.add('visible');
+                }, 600);
             }
         }
 

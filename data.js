@@ -40,19 +40,19 @@ const questions = [
         text: "You find a broken coffee machine in the office kitchen. What catches your eye first?",
         answers: [
             {
-                text: "How the parts connect and what pattern the problem follows.",
+                text: "⚙️ How the parts connect and what pattern the problem follows.",
                 probabilities: [7, 6, 6, 5, 4, 2, 2, 0, 1, 5, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 3, 2, 3, 2, 2, 0, 6, 2]
             },
             {
-                text: "Whether this could create bigger risks or security issues.",
+                text: "🔒 Whether this could create bigger risks or security issues.",
                 probabilities: [3, 4, 3, 8, 5, 1, 3, 1, 4, 3, 2, 0, 0, 5, 1, 2, 0, 1, 0, 1, 0, 8, 6, 4, 2, 2, 1, 4, 3]
             },
             {
-                text: "The people waiting for their morning coffee and their frustration.",
+                text: "☕ The people waiting for their morning coffee and their frustration.",
                 probabilities: [0, 1, 1, 1, 3, 2, 5, 7, 6, 3, 4, 6, 8, 3, 2, 3, 4, 7, 5, 6, 2, 2, 2, 3, 2, 4, 6, 3, 2]
             },
             {
-                text: "How to fix it fastest and get everything running smoothly again.",
+                text: "🔧 How to fix it fastest and get everything running smoothly again.",
                 probabilities: [2, 3, 3, 2, 6, 4, 7, 3, 5, 7, 5, 1, 1, 2, 1, 2, 2, 4, 3, 4, 1, 3, 4, 5, 5, 8, 4, 5, 4]
             }
         ]
@@ -62,19 +62,19 @@ const questions = [
         text: "Your boss makes a decision you disagree with. What's your first thought?",
         answers: [
             {
-                text: "Is this even legal? What are the rules about this?",
+                text: "⚖️ Is this even legal? What are the rules about this?",
                 probabilities: [1, 1, 1, 4, 4, 3, 3, 2, 7, 2, 2, 3, 2, 8, 4, 5, 2, 1, 1, 1, 2, 6, 7, 3, 3, 2, 1, 2, 4]
             },
             {
-                text: "Does this make financial sense? Is money being wasted?",
+                text: "💰 Does this make financial sense? Is money being wasted?",
                 probabilities: [3, 2, 2, 2, 4, 8, 6, 3, 5, 6, 6, 2, 1, 2, 2, 3, 2, 2, 3, 3, 1, 5, 4, 3, 7, 5, 3, 3, 8]
             },
             {
-                text: "Why did they decide this? What's the history behind it?",
+                text: "📚 Why did they decide this? What's the history behind it?",
                 probabilities: [0, 0, 0, 1, 1, 2, 2, 3, 4, 1, 2, 7, 4, 4, 8, 7, 4, 3, 5, 4, 6, 2, 3, 1, 1, 1, 5, 1, 2]
             },
             {
-                text: "How will people react to this? Was it explained well?",
+                text: "💬 How will people react to this? Was it explained well?",
                 probabilities: [1, 2, 2, 2, 3, 3, 6, 7, 5, 4, 5, 5, 5, 3, 4, 6, 8, 5, 4, 5, 5, 3, 3, 2, 3, 3, 4, 2, 3]
             }
         ]
@@ -84,19 +84,19 @@ const questions = [
         text: "You get unlimited money to solve one world problem. What excites you most?",
         answers: [
             {
-                text: "Building smart technology that can scale to millions of people.",
+                text: "🚀 Building smart technology that can scale to millions of people.",
                 probabilities: [8, 7, 7, 5, 3, 3, 4, 1, 2, 6, 2, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 3, 2, 4, 2, 3, 1, 5, 3]
             },
             {
-                text: "Creating a business model that's profitable and sustainable forever.",
+                text: "📈 Creating a business model that's profitable and sustainable forever.",
                 probabilities: [2, 2, 2, 2, 4, 8, 7, 3, 6, 6, 7, 2, 2, 2, 3, 4, 2, 3, 4, 4, 1, 5, 4, 4, 7, 5, 4, 3, 8]
             },
             {
-                text: "Bringing different cultures together and helping them understand each other.",
+                text: "🌍 Bringing different cultures together and helping them understand each other.",
                 probabilities: [0, 1, 1, 1, 2, 2, 4, 6, 5, 2, 3, 7, 8, 3, 8, 8, 5, 6, 7, 6, 7, 2, 3, 1, 1, 2, 7, 1, 2]
             },
             {
-                text: "Setting up safety systems that protect people from harm.",
+                text: "🛡️ Setting up safety systems that protect people from harm.",
                 probabilities: [1, 2, 2, 7, 6, 3, 4, 4, 7, 3, 3, 4, 5, 8, 3, 4, 2, 3, 2, 2, 2, 8, 7, 5, 4, 3, 2, 4, 4]
             }
         ]
@@ -106,19 +106,19 @@ const questions = [
         text: "In team meetings, you naturally:",
         answers: [
             {
-                text: "Spot the holes in people's logic and suggest better options.",
+                text: "🧠 Spot the holes in people's logic and suggest better options.",
                 probabilities: [7, 6, 6, 5, 5, 5, 4, 2, 3, 6, 3, 2, 1, 3, 2, 2, 2, 1, 1, 2, 1, 4, 3, 4, 5, 4, 2, 5, 5]
             },
             {
-                text: "Make sure everyone gets to speak and feels heard.",
+                text: "🤝 Make sure everyone gets to speak and feels heard.",
                 probabilities: [1, 2, 2, 2, 3, 2, 7, 8, 5, 3, 4, 6, 7, 3, 5, 6, 6, 6, 5, 6, 5, 2, 2, 2, 2, 3, 6, 2, 2]
             },
             {
-                text: "Paint a picture with words that makes complex ideas simple.",
+                text: "🎨 Paint a picture with words that makes complex ideas simple.",
                 probabilities: [1, 2, 3, 1, 2, 2, 3, 4, 2, 4, 5, 4, 3, 1, 5, 4, 8, 5, 7, 6, 6, 1, 1, 3, 2, 2, 7, 2, 2]
             },
             {
-                text: "Figure out what's actually possible with the time and money we have.",
+                text: "📊 Figure out what's actually possible with the time and money we have.",
                 probabilities: [3, 4, 3, 3, 6, 6, 7, 4, 5, 7, 6, 2, 2, 3, 2, 3, 3, 4, 4, 5, 2, 5, 5, 5, 7, 8, 4, 6, 6]
             }
         ]
@@ -128,19 +128,19 @@ const questions = [
         text: "You notice a weird pattern nobody else sees. You immediately want to:",
         answers: [
             {
-                text: "Test it with numbers and see if it holds up.",
+                text: "🔬 Test it with numbers and see if it holds up.",
                 probabilities: [8, 6, 6, 4, 4, 4, 2, 1, 2, 5, 2, 3, 1, 1, 2, 2, 1, 1, 1, 1, 2, 3, 2, 4, 4, 2, 1, 5, 4]
             },
             {
-                text: "Think about how to make money from this discovery.",
+                text: "💡 Think about how to make money from this discovery.",
                 probabilities: [2, 3, 3, 3, 3, 7, 7, 2, 3, 7, 8, 1, 1, 2, 2, 3, 5, 4, 4, 4, 2, 4, 3, 3, 5, 5, 4, 3, 7]
             },
             {
-                text: "Wonder what this says about society and human behavior.",
+                text: "👥 Wonder what this says about society and human behavior.",
                 probabilities: [1, 1, 1, 1, 1, 3, 2, 3, 4, 2, 3, 8, 4, 3, 8, 7, 4, 2, 5, 3, 7, 2, 3, 1, 2, 1, 4, 1, 3]
             },
             {
-                text: "Write it down carefully so you can prove it later.",
+                text: "📝 Write it down carefully so you can prove it later.",
                 probabilities: [4, 5, 5, 6, 7, 3, 4, 3, 4, 4, 3, 3, 2, 6, 2, 3, 2, 3, 2, 3, 3, 7, 7, 6, 6, 5, 2, 5, 4]
             }
         ]
@@ -150,19 +150,19 @@ const questions = [
         text: "When you read something complicated, what grabs you?",
         answers: [
             {
-                text: "How precise the language is and whether the argument makes sense.",
+                text: "📖 How precise the language is and whether the argument makes sense.",
                 probabilities: [5, 4, 4, 4, 5, 4, 3, 2, 4, 4, 3, 3, 2, 7, 5, 5, 4, 2, 2, 2, 8, 4, 4, 3, 4, 3, 2, 3, 4]
             },
             {
-                text: "The data, numbers, and proof they're showing.",
+                text: "📊 The data, numbers and proof they're showing.",
                 probabilities: [7, 6, 6, 4, 5, 7, 4, 2, 4, 6, 4, 4, 2, 3, 3, 3, 2, 2, 2, 3, 2, 5, 4, 5, 7, 4, 2, 5, 7]
             },
             {
-                text: "The personal stories and emotions behind the facts.",
+                text: "❤️ The personal stories and emotions behind the facts.",
                 probabilities: [0, 1, 1, 1, 2, 1, 3, 7, 3, 2, 3, 7, 8, 2, 6, 5, 6, 7, 6, 6, 7, 2, 2, 2, 2, 2, 6, 2, 2]
             },
             {
-                text: "How different cultures see this topic in their own way.",
+                text: "🌐 How different cultures see this topic in their own way.",
                 probabilities: [1, 2, 2, 2, 2, 3, 4, 4, 4, 3, 5, 5, 4, 3, 8, 8, 5, 5, 7, 6, 7, 3, 5, 3, 2, 4, 7, 2, 3]
             }
         ]
@@ -172,19 +172,19 @@ const questions = [
         text: "Your family leaves you a failing business. First thing you do?",
         answers: [
             {
-                text: "Check every system to find what's broken and where money is leaking.",
+                text: "🔍 Check every system to find what's broken and where money is leaking.",
                 probabilities: [4, 6, 6, 7, 7, 5, 6, 3, 4, 7, 5, 2, 1, 4, 1, 2, 2, 3, 3, 4, 1, 7, 5, 5, 7, 6, 3, 5, 6]
             },
             {
-                text: "Talk to the employees—understand what they're feeling and what they know.",
+                text: "👥 Talk to the employees — understand what they're feeling and what they know.",
                 probabilities: [1, 2, 2, 2, 4, 3, 7, 8, 5, 4, 4, 6, 7, 2, 3, 4, 5, 6, 5, 6, 3, 2, 2, 3, 3, 4, 6, 3, 3]
             },
             {
-                text: "Study the market—who's winning and what gaps can we fill?",
+                text: "📈 Study the market — who's winning and what gaps can we fill?",
                 probabilities: [2, 3, 3, 2, 3, 7, 7, 2, 3, 7, 8, 3, 1, 2, 4, 5, 6, 5, 6, 6, 3, 4, 4, 4, 6, 6, 6, 3, 7]
             },
             {
-                text: "Make sure we're following all laws and won't get in legal trouble.",
+                text: "⚖️ Make sure we're following all laws and won't get in legal trouble.",
                 probabilities: [1, 2, 2, 5, 5, 4, 5, 3, 6, 4, 4, 2, 2, 8, 2, 3, 2, 3, 3, 3, 1, 7, 7, 5, 6, 4, 3, 4, 5]
             }
         ]
@@ -194,19 +194,19 @@ const questions = [
         text: "Foreign guests are visiting. What interests you most?",
         answers: [
             {
-                text: "Making sure everything runs perfectly—from airport pickup to dinner.",
+                text: "✨ Making sure everything runs perfectly — from airport pickup to dinner.",
                 probabilities: [2, 3, 3, 3, 6, 3, 6, 4, 5, 5, 5, 2, 2, 3, 4, 5, 4, 7, 7, 8, 3, 3, 5, 4, 4, 8, 8, 3, 3]
             },
             {
-                text: "Learning their customs and what's considered polite in their culture.",
+                text: "🌏 Learning their customs and what's considered polite in their culture.",
                 probabilities: [0, 1, 1, 2, 2, 2, 4, 5, 6, 2, 4, 6, 4, 4, 8, 8, 5, 6, 6, 6, 7, 3, 6, 2, 2, 3, 6, 1, 2]
             },
             {
-                text: "Exploring if this could lead to business deals or partnerships.",
+                text: "💼 Exploring if this could lead to business deals or partnerships.",
                 probabilities: [2, 3, 3, 3, 3, 7, 7, 3, 5, 7, 8, 2, 1, 3, 5, 6, 5, 4, 5, 5, 3, 4, 5, 3, 5, 5, 5, 3, 7]
             },
             {
-                text: "Creating real human connections despite the language barrier.",
+                text: "🤝 Creating real human connections despite the language barrier.",
                 probabilities: [0, 1, 1, 1, 2, 2, 4, 6, 4, 2, 3, 6, 7, 2, 6, 6, 6, 7, 7, 7, 8, 2, 3, 2, 2, 2, 7, 1, 2]
             }
         ]
@@ -216,19 +216,19 @@ const questions = [
         text: "Two experts disagree. What do you do?",
         answers: [
             {
-                text: "Build a test to see whose prediction actually works better.",
+                text: "🧪 Build a test to see whose prediction actually works better.",
                 probabilities: [8, 7, 7, 5, 4, 5, 3, 1, 2, 6, 2, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1, 4, 3, 4, 4, 3, 1, 6, 5]
             },
             {
-                text: "Look up what the law or official rules say about this.",
+                text: "📜 Look up what the law or official rules say about this.",
                 probabilities: [1, 2, 2, 4, 5, 3, 3, 2, 6, 3, 3, 3, 2, 8, 4, 5, 2, 2, 2, 2, 3, 7, 7, 4, 4, 3, 2, 3, 4]
             },
             {
-                text: "Research the history—why do people see this so differently?",
+                text: "📚 Research the history — why do people see this so differently?",
                 probabilities: [1, 1, 1, 1, 2, 3, 3, 4, 4, 2, 3, 8, 5, 4, 8, 7, 4, 3, 4, 3, 6, 2, 3, 2, 2, 2, 4, 2, 3]
             },
             {
-                text: "See which option gets better results in the real world.",
+                text: "🎯 See which option gets better results in the real world.",
                 probabilities: [3, 4, 4, 4, 7, 6, 7, 4, 5, 7, 6, 2, 2, 3, 2, 3, 3, 5, 4, 5, 2, 5, 5, 6, 7, 8, 4, 6, 6]
             }
         ]
@@ -238,19 +238,19 @@ const questions = [
         text: "You're asked to fix a government service. What excites you?",
         answers: [
             {
-                text: "Redesigning how information flows so it's easier to use.",
+                text: "💻 Redesigning how information flows so it's easier to use.",
                 probabilities: [5, 7, 7, 4, 5, 3, 5, 3, 5, 7, 3, 3, 3, 2, 2, 3, 5, 6, 4, 5, 3, 3, 3, 3, 3, 4, 5, 4, 3]
             },
             {
-                text: "Making sure it actually helps the people who need it most.",
+                text: "🫶 Making sure it actually helps the people who need it most.",
                 probabilities: [0, 1, 1, 2, 3, 3, 5, 6, 7, 3, 3, 8, 8, 5, 5, 5, 4, 7, 4, 4, 4, 3, 3, 2, 2, 3, 4, 2, 3]
             },
             {
-                text: "Figuring out how to do it cheaper without losing quality.",
+                text: "💰 Figuring out how to do it cheaper without losing quality.",
                 probabilities: [4, 4, 4, 3, 5, 8, 7, 3, 6, 7, 5, 2, 2, 3, 2, 3, 2, 3, 3, 4, 1, 5, 4, 4, 8, 6, 3, 4, 8]
             },
             {
-                text: "Building in proper checks so nothing goes wrong.",
+                text: "✅ Building in proper checks so nothing goes wrong.",
                 probabilities: [2, 3, 3, 6, 7, 4, 5, 3, 7, 4, 4, 3, 3, 8, 3, 4, 2, 4, 3, 4, 2, 7, 7, 6, 6, 5, 3, 5, 5]
             }
         ]
@@ -260,19 +260,19 @@ const questions = [
         text: "You see someone being treated unfairly. What hits you first?",
         answers: [
             {
-                text: "This breaks the rules—there's a principle being violated here.",
+                text: "⚖️ This breaks the rules — there's a principle being violated here.",
                 probabilities: [5, 4, 4, 5, 6, 4, 4, 3, 5, 4, 3, 4, 4, 7, 3, 4, 2, 3, 2, 3, 3, 6, 6, 4, 5, 4, 2, 4, 4]
             },
             {
-                text: "That person must feel awful—I can feel their pain.",
+                text: "💔 That person must feel awful — I can feel their pain.",
                 probabilities: [0, 1, 1, 1, 2, 2, 4, 7, 4, 2, 2, 7, 8, 4, 5, 5, 4, 7, 5, 6, 4, 2, 2, 2, 2, 2, 6, 2, 2]
             },
             {
-                text: "This is inefficient—resources aren't being used right.",
+                text: "📉 This is inefficient — resources aren't being used right.",
                 probabilities: [4, 4, 4, 3, 5, 7, 7, 4, 6, 7, 5, 5, 4, 4, 3, 4, 3, 3, 3, 4, 2, 5, 4, 4, 7, 6, 3, 4, 7]
             },
             {
-                text: "I need to document this and build a case to fix it.",
+                text: "📋 I need to document this and build a case to fix it.",
                 probabilities: [2, 3, 3, 5, 5, 3, 5, 4, 7, 4, 3, 6, 5, 8, 4, 5, 5, 4, 3, 3, 3, 6, 6, 4, 4, 4, 3, 3, 4]
             }
         ]
@@ -282,19 +282,19 @@ const questions = [
         text: "You're learning something totally new. What feels natural?",
         answers: [
             {
-                text: "Breaking it into small pieces and mastering each one.",
+                text: "🧩 Breaking it into small pieces and mastering each one.",
                 probabilities: [7, 6, 6, 5, 6, 5, 4, 2, 3, 5, 3, 3, 2, 4, 3, 3, 2, 2, 2, 3, 4, 5, 4, 5, 6, 4, 2, 6, 5]
             },
             {
-                text: "Jumping in and learning by trying stuff, even if I fail.",
+                text: "🎢 Jumping in and learning by trying stuff, even if I fail.",
                 probabilities: [3, 4, 5, 4, 5, 4, 6, 5, 5, 6, 6, 4, 5, 4, 5, 5, 6, 7, 6, 7, 5, 4, 5, 6, 5, 3, 5, 6, 4]
             },
             {
-                text: "Finding someone who already knows it to teach me.",
+                text: "👨‍🏫 Finding someone who already knows it to teach me.",
                 probabilities: [1, 2, 2, 2, 3, 3, 5, 6, 4, 3, 4, 5, 6, 3, 4, 5, 5, 6, 5, 6, 4, 2, 3, 3, 3, 3, 5, 3, 3]
             },
             {
-                text: "Reading everything written about it first before starting.",
+                text: "📚 Reading everything written about it first before starting.",
                 probabilities: [6, 5, 4, 4, 5, 5, 3, 3, 5, 4, 3, 4, 3, 6, 6, 5, 4, 2, 3, 2, 7, 5, 4, 4, 5, 3, 3, 4, 5]
             }
         ]
@@ -304,19 +304,19 @@ const questions = [
         text: "At a party, you naturally gravitate toward:",
         answers: [
             {
-                text: "Deep one-on-one conversations with interesting people.",
+                text: "💬 Deep one-on-one conversations with interesting people.",
                 probabilities: [2, 3, 3, 2, 3, 4, 5, 7, 5, 4, 4, 7, 8, 5, 6, 6, 5, 6, 5, 6, 6, 3, 3, 3, 3, 3, 5, 3, 4]
             },
             {
-                text: "Observing group dynamics and how people interact.",
+                text: "👀 Observing group dynamics and how people interact.",
                 probabilities: [1, 2, 2, 3, 4, 3, 5, 6, 5, 4, 4, 8, 6, 4, 7, 7, 6, 5, 5, 5, 5, 3, 3, 2, 3, 3, 5, 2, 3]
             },
             {
-                text: "Networking and making connections that could be useful.",
+                text: "🤝 Networking and making connections that could be useful.",
                 probabilities: [2, 3, 3, 3, 4, 6, 7, 5, 6, 7, 8, 3, 3, 4, 5, 6, 7, 5, 6, 6, 4, 5, 5, 4, 5, 5, 6, 4, 7]
             },
             {
-                text: "Making sure everyone is comfortable and having a good time.",
+                text: "🎉 Making sure everyone is comfortable and having a good time.",
                 probabilities: [1, 2, 2, 2, 4, 3, 6, 8, 6, 4, 5, 6, 7, 3, 4, 5, 6, 8, 7, 8, 5, 3, 3, 3, 3, 4, 7, 3, 3]
             }
         ]
@@ -326,19 +326,19 @@ const questions = [
         text: "When faced with a complex problem, your first instinct is to:",
         answers: [
             {
-                text: "Break it down into logical components and analyze each part.",
+                text: "🧩 Break it down into logical components and analyze each part.",
                 probabilities: [8, 7, 7, 6, 6, 6, 5, 3, 4, 6, 4, 3, 2, 5, 3, 4, 3, 3, 3, 4, 5, 6, 5, 5, 6, 5, 3, 6, 6]
             },
             {
-                text: "Talk it through with others to get diverse perspectives.",
+                text: "💭 Talk it through with others to get diverse perspectives.",
                 probabilities: [1, 2, 3, 2, 4, 4, 7, 7, 6, 5, 5, 7, 7, 4, 6, 7, 7, 6, 6, 6, 5, 3, 3, 3, 4, 4, 6, 3, 4]
             },
             {
-                text: "Look for similar problems that have been solved before.",
+                text: "🔍 Look for similar problems that have been solved before.",
                 probabilities: [4, 5, 5, 4, 5, 5, 5, 4, 5, 5, 5, 4, 3, 6, 5, 5, 4, 4, 4, 5, 6, 5, 5, 5, 6, 5, 4, 5, 5]
             },
             {
-                text: "Try different approaches and see what works.",
+                text: "🧪 Try different approaches and see what works.",
                 probabilities: [5, 6, 6, 5, 6, 5, 6, 4, 5, 7, 6, 4, 4, 4, 4, 4, 5, 6, 5, 6, 4, 5, 5, 6, 5, 7, 5, 7, 5]
             }
         ]
@@ -348,19 +348,19 @@ const questions = [
         text: "What motivates you most in your work?",
         answers: [
             {
-                text: "Solving challenging intellectual puzzles and problems.",
+                text: "🧩 Solving challenging intellectual puzzles and problems.",
                 probabilities: [8, 7, 7, 6, 5, 5, 4, 2, 3, 6, 3, 3, 2, 5, 3, 4, 3, 2, 2, 3, 6, 6, 5, 5, 5, 4, 2, 6, 6]
             },
             {
-                text: "Making a tangible positive impact on people's lives.",
+                text: "🌟 Making a tangible positive impact on people's lives.",
                 probabilities: [1, 2, 2, 2, 4, 3, 5, 8, 7, 3, 4, 8, 9, 6, 6, 6, 5, 8, 6, 7, 4, 4, 4, 4, 3, 4, 6, 3, 3]
             },
             {
-                text: "Building something successful and seeing it grow.",
+                text: "🏗️ Building something successful and seeing it grow.",
                 probabilities: [3, 4, 4, 3, 5, 7, 8, 4, 6, 7, 8, 3, 3, 4, 4, 5, 6, 5, 6, 6, 3, 5, 5, 5, 6, 6, 6, 5, 7]
             },
             {
-                text: "Achieving mastery and becoming an expert in your field.",
+                text: "🎓 Achieving mastery and becoming an expert in your field.",
                 probabilities: [7, 6, 6, 7, 6, 6, 5, 4, 5, 6, 4, 4, 3, 7, 5, 5, 4, 4, 4, 5, 8, 6, 6, 6, 6, 5, 4, 6, 6]
             }
         ]
@@ -370,19 +370,19 @@ const questions = [
         text: "When reading news about a major event, what catches your attention?",
         answers: [
             {
-                text: "The data, statistics, and factual details.",
+                text: "📊 The data, statistics and factual details.",
                 probabilities: [7, 6, 6, 5, 5, 7, 5, 2, 4, 6, 4, 4, 2, 4, 4, 4, 3, 2, 3, 3, 3, 6, 5, 5, 7, 4, 3, 5, 7]
             },
             {
-                text: "The human stories and personal experiences involved.",
+                text: "❤️ The human stories and personal experiences involved.",
                 probabilities: [1, 2, 2, 2, 3, 2, 4, 8, 4, 3, 4, 8, 8, 4, 7, 6, 7, 7, 7, 7, 7, 3, 3, 3, 3, 3, 7, 2, 3]
             },
             {
-                text: "The political and economic implications.",
+                text: "🌐 The political and economic implications.",
                 probabilities: [2, 3, 3, 3, 4, 7, 6, 3, 7, 6, 6, 5, 3, 6, 6, 7, 5, 3, 4, 4, 4, 6, 5, 4, 6, 5, 4, 4, 7]
             },
             {
-                text: "How different countries and cultures are responding.",
+                text: "🗺️ How different countries and cultures are responding.",
                 probabilities: [1, 2, 2, 2, 3, 3, 4, 4, 5, 3, 4, 6, 5, 4, 8, 8, 6, 5, 7, 6, 7, 4, 6, 3, 3, 4, 7, 2, 3]
             }
         ]
@@ -392,19 +392,19 @@ const questions = [
         text: "In a crisis situation, your natural role is to:",
         answers: [
             {
-                text: "Stay calm and create a logical action plan.",
+                text: "🧭 Stay calm and create a logical action plan.",
                 probabilities: [6, 7, 7, 7, 7, 6, 7, 4, 6, 7, 5, 3, 3, 6, 4, 5, 4, 5, 5, 6, 4, 7, 6, 5, 6, 7, 5, 6, 6]
             },
             {
-                text: "Support people emotionally and keep morale up.",
+                text: "🫂 Support people emotionally and keep morale up.",
                 probabilities: [1, 2, 2, 2, 3, 3, 6, 8, 6, 3, 4, 7, 8, 4, 5, 6, 6, 8, 6, 7, 5, 3, 3, 3, 3, 3, 7, 3, 3]
             },
             {
-                text: "Take charge and make quick decisions.",
+                text: "⚡ Take charge and make quick decisions.",
                 probabilities: [3, 4, 4, 5, 6, 6, 8, 5, 7, 7, 7, 4, 4, 6, 5, 6, 5, 6, 6, 7, 4, 7, 6, 5, 6, 7, 6, 6, 7]
             },
             {
-                text: "Gather information and assess all options before acting.",
+                text: "🔍 Gather information and assess all options before acting.",
                 probabilities: [7, 6, 6, 6, 6, 6, 5, 4, 6, 6, 4, 5, 4, 7, 6, 6, 5, 4, 4, 4, 6, 6, 6, 5, 6, 5, 4, 5, 6]
             }
         ]
@@ -414,19 +414,19 @@ const questions = [
         text: "What type of work environment appeals to you most?",
         answers: [
             {
-                text: "Structured with clear procedures and expectations.",
+                text: "📋 Structured with clear procedures and expectations.",
                 probabilities: [5, 6, 6, 6, 7, 5, 6, 4, 7, 5, 5, 3, 3, 7, 4, 5, 4, 5, 5, 6, 5, 7, 7, 6, 7, 6, 5, 6, 6]
             },
             {
-                text: "Collaborative with lots of teamwork and interaction.",
+                text: "👥 Collaborative with lots of teamwork and interaction.",
                 probabilities: [2, 3, 3, 3, 5, 4, 7, 8, 6, 5, 6, 7, 8, 4, 6, 7, 7, 7, 7, 7, 6, 4, 4, 4, 4, 5, 7, 4, 4]
             },
             {
-                text: "Dynamic and fast-paced with new challenges daily.",
+                text: "⚡ Dynamic and fast-paced with new challenges daily.",
                 probabilities: [4, 5, 5, 5, 5, 6, 7, 5, 6, 7, 8, 5, 5, 5, 5, 6, 7, 6, 7, 7, 5, 6, 6, 5, 6, 7, 7, 5, 7]
             },
             {
-                text: "Independent where you can work autonomously.",
+                text: "🚀 Independent where you can work autonomously.",
                 probabilities: [7, 6, 6, 5, 4, 5, 4, 3, 4, 5, 3, 5, 4, 6, 6, 5, 4, 3, 3, 3, 7, 5, 5, 6, 5, 4, 3, 6, 5]
             }
         ]
@@ -436,19 +436,19 @@ const questions = [
         text: "When learning about a new technology or system, you prefer to:",
         answers: [
             {
-                text: "Understand the theoretical principles behind how it works.",
+                text: "🔬 Understand the theoretical principles behind how it works.",
                 probabilities: [8, 7, 6, 6, 5, 6, 4, 3, 4, 6, 3, 4, 3, 6, 5, 5, 4, 3, 3, 4, 7, 5, 5, 5, 6, 4, 3, 7, 6]
             },
             {
-                text: "See practical examples of its real-world applications.",
+                text: "🎯 See practical examples of its real-world applications.",
                 probabilities: [5, 6, 7, 5, 6, 6, 7, 5, 6, 7, 7, 5, 5, 5, 5, 5, 6, 6, 6, 6, 4, 6, 6, 6, 6, 7, 6, 6, 6]
             },
             {
-                text: "Experiment with it hands-on to figure it out yourself.",
+                text: "🛠️ Experiment with it hands-on to figure it out yourself.",
                 probabilities: [6, 7, 7, 6, 6, 5, 6, 4, 5, 7, 6, 4, 4, 4, 4, 5, 5, 5, 5, 6, 5, 5, 5, 7, 5, 6, 5, 7, 5]
             },
             {
-                text: "Learn how it impacts people and organizations.",
+                text: "👥 Learn how it impacts people and organizations.",
                 probabilities: [2, 3, 3, 3, 5, 5, 7, 7, 7, 6, 6, 7, 7, 5, 6, 7, 7, 6, 6, 6, 5, 4, 5, 4, 5, 5, 7, 4, 5]
             }
         ]
@@ -458,19 +458,19 @@ const questions = [
         text: "What would you find most rewarding in your career?",
         answers: [
             {
-                text: "Creating innovative solutions to complex problems.",
+                text: "💡 Creating innovative solutions to complex problems.",
                 probabilities: [8, 8, 8, 7, 6, 6, 6, 3, 5, 8, 5, 4, 3, 5, 4, 5, 5, 4, 4, 5, 5, 6, 5, 6, 6, 6, 4, 7, 7]
             },
             {
-                text: "Helping people overcome challenges and improve their lives.",
+                text: "🌟 Helping people overcome challenges and improve their lives.",
                 probabilities: [1, 2, 2, 3, 4, 3, 6, 9, 7, 4, 4, 8, 9, 6, 6, 6, 6, 8, 7, 7, 5, 4, 4, 4, 4, 4, 7, 3, 4]
             },
             {
-                text: "Building a successful and profitable enterprise.",
+                text: "🏆 Building a successful and profitable enterprise.",
                 probabilities: [3, 4, 4, 4, 5, 8, 8, 4, 7, 8, 9, 4, 3, 5, 5, 6, 7, 6, 7, 7, 4, 6, 6, 6, 7, 7, 7, 5, 8]
             },
             {
-                text: "Achieving recognition as an expert in your field.",
+                text: "🎓 Achieving recognition as an expert in your field.",
                 probabilities: [7, 6, 6, 6, 6, 6, 5, 4, 5, 6, 4, 5, 4, 7, 7, 6, 5, 4, 5, 5, 8, 6, 6, 6, 6, 5, 5, 6, 6]
             }
         ]

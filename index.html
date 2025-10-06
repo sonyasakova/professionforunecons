@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="landing-page">
+    <div class="landing-page" id="landingPage">
         <div class="container">
-            <div class="landing-content fade-in">
-                <h1 class="landing-title">Discover your professional path</h1>
+            <div class="landing-content" id="landingContent">
+                <h1 class="landing-title">
+                    Discover your professional path
+                </h1>
 
                 <p class="landing-subtitle">
                     A scientifically-designed career assessment for Unecon students
@@ -22,10 +24,33 @@
                 </a>
 
                 <p class="credit-line">
-                    by Sonya Sakova for students of Unecon
+                    with ❤️ by Sonya Sakova for the students of Unecon
                 </p>
             </div>
         </div>
     </div>
+
+    <script>
+        // Mouse-movement parallax effect
+        const landingPage = document.getElementById('landingPage');
+        const landingContent = document.getElementById('landingContent');
+
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+
+            // Calculate offset values with drastically reduced sensitivity
+            const offsetX = (mouseX - 0.5) * 6;
+            const offsetY = (mouseY - 0.5) * 6;
+
+            // Apply parallax to background (increased horizontal sensitivity)
+            const bgX = 50 + offsetX * 0.5;
+            const bgY = 50 + offsetY * 0.15;
+            landingPage.style.backgroundPosition = `${bgX}% ${bgY}%`;
+
+            // Apply parallax to content (opposite direction for depth, minimal movement)
+            landingContent.style.transform = `translate(${offsetX * 0.05}px, ${offsetY * 0.05}px)`;
+        });
+    </script>
 </body>
 </html>
